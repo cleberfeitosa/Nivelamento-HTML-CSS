@@ -32,3 +32,18 @@ O foco aqui é o **pragmatismo**: abordar os conceitos essenciais que aparecem e
 ## 💡 Para quem é este repositório?
 
 Para desenvolvedores e estudantes que precisam **nivelar o conhecimento de forma rápida e eficiente**, eliminando lacunas na base web para entrar com confiança no ecossistema de frameworks front-end.
+#### Dica: seja um explorador. Testar e encontrar é mais importante que decorar!
+- Será que isso funciona?
+- O que acontece se eu fizer isso?
+
+Resposta: Faça o teste. Busque na web.
+
+#### Referências
+
+https://www.w3schools.com/html
+
+https://www.w3schools.com/css
+
+https://www.w3schools.com/cssref
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox
