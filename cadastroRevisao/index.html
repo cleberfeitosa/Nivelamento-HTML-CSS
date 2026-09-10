@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Formulário de Cadastro</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <form action="/api/cadastro" method="POST">
+ <!-- Agrupamento 1: Dados Pessoais -->
+ <fieldset>
+ <legend>1. Dados Pessoais</legend>
+ <div>
+ <label for="nome">Nome Completo *</label>
+ <!-- EXERCÍCIO 4: Mudado minlength para "10" -->
+ <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required minlength="10">
+ </div>
+ <div>
+ <label for="email">E-mail *</label>
+ <input type="email" id="email" name="email" placeholder="maria@email.com" required>
+ </div>
+ <div>
+ <label for="telefone">Telefone</label>
+ <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\[0-9\]{2}\s?[0-9\]{4,5}-?[0-9\]{4}">
+ </div>
+ <div>
+ <label for="nascimento">Data de Nascimento *</label>
+ <!-- EXERCÍCIO 4: Adicionado max="2026-09-02" para bloquear datas futuras (ajustado para a data atual) -->
+ <input type="date" id="nascimento" name="nascimento" max="2026-09-02" required>
+ </div>
+ <!-- EXERCÍCIO 2: Novo campo de CPF adicionado -->
+ <div>
+ <label for="cpf">CPF *</label>
+ <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\[0-9\]{3}\.\[0-9\]{3}\.\[0-9\]{3}-\[0-9\]{2}" required>
+ </div>
+ </fieldset>
+
+ <!-- Agrupamento 2: Preferências -->
+ <fieldset>
+ <legend>2. Preferências e Perfil</legend>
+ <div>
+ <label for="area">Área de Interesse *</label>
+ <select id="area" name="area" required>
+ <option value="" disabled selected>Selecione uma opção...</option>
+ <option value="frontend">Desenvolvimento Front-end</option>
+ <option value="backend">Desenvolvimento Back-end</option>
+ <option value="design">UI/UX Design</option>
+ <!-- EXERCÍCIO 3: Novas opções adicionadas -->
+ <option value="mobile">Desenvolvimento Mobile</option>
+ <option value="dados">Ciência de Dados</option>
+ </select>
+ </div>
+ <div>
+ <label>Nível de Experiência</label>
+ <div>
+ <!-- EXERCÍCIO 3: Atributo 'checked' movido para o Iniciante -->
+ <input type="radio" id="exp-iniciante" name="nivel" value="iniciante" checked>
+ <label for="exp-iniciante">Iniciante</label>
+ <input type="radio" id="exp-pleno" name="nivel" value="intermediario">
+ <label for="exp-pleno">Intermediário</label>
+ <input type="radio" id="exp-senior" name="nivel" value="avancado">
+ <label for="exp-senior">Avançado</label>
+ </div>
+ </div>
+ <div>
+ <label for="bio">Biografia / Apresentação</label>
+ <textarea id="bio" name="bio" rows="4" placeholder="Conte um pouco sobre você..."></textarea>
+ </div>
+ </fieldset>
+
+ <!-- EXERCÍCIO 5: Novo bloco de Redes Sociais criado do zero -->
+ <!-- Agrupamento 3: Redes Sociais -->
+ <fieldset>
+ <legend>3. Redes Sociais</legend>
+ <div>
+ <label for="linkedin">LinkedIn</label>
+ <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com">
+ </div>
+ <div>
+ <label for="github">GitHub</label>
+ <input type="url" id="github" name="github" placeholder="https://github.com">
+ </div>
+ </fieldset>
+
+ <div>
+ <input type="checkbox" id="newsletter" name="newsletter" value="sim" checked>
+ <label for="newsletter">Desejo receber novidades por e-mail</label>
+ </div>
+ <div style="margin-top: 15px;">
+ <button type="submit">Concluir Cadastro</button>
+ <button type="reset">Limpar Formulário</button>
+ </div>
+ </form>
+</body>
+</html>
